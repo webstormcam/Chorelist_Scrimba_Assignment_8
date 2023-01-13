@@ -1,4 +1,4 @@
-let arrayOfChores=[];
+let arrayOfChores=[]
 const taskInput = document.getElementById('new-task')
 const currentChores = document.getElementById('current-chores')
 const enterChores = document.getElementById('enter')
@@ -22,6 +22,7 @@ enterChores.addEventListener('click',function(){
 
 removeChores.addEventListener('click',function(){
   localStorage.clear()
+  arrayOfChores=[]
   currentChores.innerHTML=''
 })
 
