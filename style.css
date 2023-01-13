@@ -1,0 +1,72 @@
+*{
+    box-sizing: border-box;
+
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    background-color: #ffffff;
+}
+
+#chore-holder{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    max-width: 638px;
+    width: 100%;
+}
+
+
+h1{
+    font-family: 'Concert One', cursive;
+    font-size: 4.4rem;
+    margin-bottom: 1.5rem;
+}
+
+#selector-section{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+input{
+    background-color: #EEEEEE;
+    border: none;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    text-align: center;
+    width: 441px;
+    font-family: 'Inter', sans-serif;
+    font-size: 1.9rem;
+}
+
+.enter-style{
+    background-color: #FFCC68;
+}
+
+.delete-style{
+    background-color: #FF9548;
+}
+
+button{
+    width: 87px;
+    font-family: 'Inter', sans-serif;
+    border: none;
+    font-size: 1.9rem;
+    border-radius: 0.5rem;
+}
+
+#current-chores{
+    width: 100%;
+}
+
+#current-chores p{
+ border-radius: 1rem;
+ text-align: center;
+ background-color: #FBDF7C;
+ font-size: 1.5rem;
+ padding: 1rem 1.5rem;
+ margin-bottom: 1rem;
+}
