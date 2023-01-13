@@ -3,9 +3,14 @@ let taskInput = document.getElementById('new-task')
 let currentChores = document.getElementById('current-chores')
 const enterChores = document.getElementById('enter')
 const removeChores = document.getElementById('delete')
+let storedChores = JSON.parse(localStorage.getItem("chores"))
 
-
-
+if(storedChores){
+    arrayOfChores = storedChores
+    console.log(arrayOfChores)
+    render()
+    
+}
 
 enterChores.addEventListener('click',function(){
     if(taskInput.value!==""){
@@ -14,16 +19,11 @@ enterChores.addEventListener('click',function(){
       taskInput.value=""
       render()  
     }
-
-
 })
 
 removeChores.addEventListener('click',function(){
   localStorage.clear()
   currentChores.innerHTML=''
-  console.log('deleted')
-
-
 })
 
 
@@ -32,10 +32,8 @@ removeChores.addEventListener('click',function(){
 
 function render(){
     let printedChores=""
-    let storedChores = JSON.parse(localStorage.getItem("chores"))
-    for(let i=0;i<storedChores.length;i++){
-       printedChores+=storedChores[i]
-        console.log(storedChores)
-    }
-    currentChores.innerHTML= printedChores
+    for(let i=0;i<arrayOfChores.length;i++){
+            printedChores+=arrayOfChores[i] 
+         }
+         currentChores.innerHTML= printedChores    
 }
