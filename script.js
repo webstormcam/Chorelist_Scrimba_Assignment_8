@@ -1,6 +1,6 @@
 let arrayOfChores=[]
 const taskInput = document.getElementById('new-task')
-const currentChores = document.getElementById('current-chores')
+const activeChores = document.getElementById('current-chores')
 const enterChores = document.getElementById('enter')
 const removeChores = document.getElementById('delete')
 let storedChores = JSON.parse(localStorage.getItem("chores"))
@@ -23,7 +23,7 @@ enterChores.addEventListener('click',function(){
 removeChores.addEventListener('click',function(){
   localStorage.clear()
   arrayOfChores=[]
-  currentChores.innerHTML=''
+  activeChores.innerHTML=''
 })
 
 
@@ -35,5 +35,5 @@ function render(){
     for(const chore of arrayOfChores){
             printedChores+=chore
          }
-         currentChores.innerHTML= printedChores    
+         activeChores.innerHTML= printedChores    
 }
