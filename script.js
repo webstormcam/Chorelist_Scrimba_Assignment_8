@@ -7,7 +7,6 @@ let storedChores = JSON.parse(localStorage.getItem("chores"))
 
 if(storedChores){
     arrayOfChores = storedChores
-    console.log(arrayOfChores)
     render()
     
 }

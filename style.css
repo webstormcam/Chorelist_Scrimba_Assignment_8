@@ -64,6 +64,7 @@ button{
 
 #current-chores p{
  border-radius: 1rem;
+ font-family: 'Inter', sans-serif;
  text-align: center;
  background-color: #FBDF7C;
  font-size: 1.5rem;
