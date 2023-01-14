@@ -35,7 +35,7 @@ enterChores.addEventListener('click',function(){
 removeChores.addEventListener('click',function(){
   localStorage.clear()
   arrayOfChores=[]
-  activeChores.innerHTML=''
+  activeChores.innerHTML= `<div style="width:100%;height:0;padding-bottom:83%;position:relative;"><iframe src="https://giphy.com/embed/IwAZ6dvvvaTtdI8SD5" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div>`
 })
 
 /*
@@ -48,6 +48,9 @@ function removeIndividualChore(el){
         if(element.innerHTML===arrayOfChores[i]){
             arrayOfChores.splice(arrayOfChores.indexOf(arrayOfChores[i]),1)
         }
+    }
+    if(arrayOfChores.length===0){
+        activeChores.innerHTML= `<div style="width:100%;height:0;padding-bottom:83%;position:relative;"><iframe src="https://giphy.com/embed/IwAZ6dvvvaTtdI8SD5" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div>`
     }
     localStorage.setItem("chores",JSON.stringify(arrayOfChores))
     element.remove() 
