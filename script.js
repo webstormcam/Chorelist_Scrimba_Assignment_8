@@ -12,8 +12,14 @@ if(storedChores){
 }
 
 enterChores.addEventListener('click',function(){
+    for(const chore of arrayOfChores){
+        if(chore===taskInput.value){
+            return
+        }
+    }
+    
     if(taskInput.value!==""){
-     arrayOfChores.push(`<p>${taskInput.value}</p>`)
+     arrayOfChores.push(`${taskInput.value}`)
      localStorage.setItem("chores",JSON.stringify(arrayOfChores))
       taskInput.value=""
       render()  
@@ -33,7 +39,7 @@ removeChores.addEventListener('click',function(){
 function render(){
     let printedChores=""
     for(const chore of arrayOfChores){
-            printedChores+=chore
+            printedChores+=`<p>${chore}</p>`
          }
          activeChores.innerHTML= printedChores    
 }
