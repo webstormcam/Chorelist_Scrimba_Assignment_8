@@ -33,7 +33,7 @@ enterChores.addEventListener('click',function(){
 
 /// This removes all the chores in one click by this function and clears the page.
 removeChores.addEventListener('click',function(){
- // I did not want the celebration gif to play if the chorelist just blank so I created this if statement   
+ // I did not want the celebration gif to play if the chorelist is just  blank and never had any items so I created this if statement 
 if(arrayOfChores.length===0){
     return
 }
