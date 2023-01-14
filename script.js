@@ -33,13 +33,22 @@ removeChores.addEventListener('click',function(){
 })
 
 
-
+function removeIndividualChore(el){
+    let element = el
+    for(let i=0;i<arrayOfChores.length;i++){
+        if(element.innerHTML===arrayOfChores[i]){
+            arrayOfChores.splice(arrayOfChores.indexOf(arrayOfChores[i]),1)
+        }
+    }
+    localStorage.setItem("chores",JSON.stringify(arrayOfChores))
+    element.remove() 
+}
 
 
 function render(){
     let printedChores=""
     for(const chore of arrayOfChores){
-            printedChores+=`<p>${chore}</p>`
+            printedChores+=`<p onclick="removeIndividualChore(this)">${chore}</p>`
          }
          activeChores.innerHTML= printedChores    
 }
