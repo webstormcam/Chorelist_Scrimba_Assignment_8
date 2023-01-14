@@ -6,7 +6,7 @@ const removeChores = document.getElementById('delete')
 let storedChores = JSON.parse(localStorage.getItem("chores"))
 
 
-//Checks if any chores are located in the local storage.
+//Checks if any chores are located in the localstorage.
 if(storedChores){
     arrayOfChores = storedChores
     render()
