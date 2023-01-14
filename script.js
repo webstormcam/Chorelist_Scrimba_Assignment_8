@@ -33,6 +33,10 @@ enterChores.addEventListener('click',function(){
 
 /// This removes all the chores in one click by this function and clears the page.
 removeChores.addEventListener('click',function(){
+ // I did not want the celebration gif to play if the chorelist just blank so I created this if statement   
+if(arrayOfChores.length===0){
+    return
+}
   localStorage.clear()
   arrayOfChores=[]
   activeChores.innerHTML= `<div style="width:100%;height:0;padding-bottom:83%;position:relative;"><iframe src="https://giphy.com/embed/IwAZ6dvvvaTtdI8SD5" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div>`
