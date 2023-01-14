@@ -36,7 +36,7 @@ input{
     background-color: #EEEEEE;
     border: none;
     border-radius: 0.5rem;
-    padding: 1rem;
+    padding: 1.5rem 1rem;
     text-align: center;
     width: 441px;
     font-family: 'Inter', sans-serif;
@@ -69,6 +69,6 @@ button{
  text-align: center;
  background-color: #FBDF7C;
  font-size: 1.5rem;
- padding: 1rem 1.5rem;
+ padding: 2rem 1rem;
  margin-bottom: 1rem;
 }

@@ -15,10 +15,10 @@ if(storedChores){
 
 
 
-//Takes user input and saves the chore in an array and in local storage for later reference and renders the active chores. 
+//Takes user input and saves the chore in an array and in local storage for later reference and renders the active chores, also does not allow users to submit the same task twice.  
 enterChores.addEventListener('click',function(){
     for(const chore of arrayOfChores){
-        if(chore===taskInput.value){
+        if(chore.toLowerCase()===taskInput.value.toLowerCase()){
             return
         }
     }
